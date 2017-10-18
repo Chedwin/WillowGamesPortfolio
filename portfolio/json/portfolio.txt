@@ -1,0 +1,138 @@
+{
+  "portfolioJSON": [
+    {
+      "projectName": "Hurricane Game Engine",
+      "htmlID": "hurricane",
+      "date": "Apr 2017 - Present",
+      "author": "Edwin Chen",
+      "headline": "Open-source custom 3D C++ game engine using DirectX 11 API",
+      "description": "Design inspired by Unity. Notable features: component-based game objects, HLSL shader programs, custom scripting behaviour (similar to Unity's MonoBehavior), 3D model loading via Assimp",
+      "occupation": "Student at Humber College / Personal Project",
+      "coverImage": "hurricaneEngineLogo.png",
+      "tech": "C++, WIN32, DirectX, Assimp, TinyXML",
+      "images": [
+        {
+          "imgName": "hurricaneTriangle.png",
+          "caption": "Primitive triangle stage. Shows off basic color shading.",
+          "tooltip": "Still a work in progress!"
+        },
+        {
+          "imgName": "cake.png",
+          "caption": "Get that cake mofo's!",
+          "tooltip": "Wubba lubba dub dub!!"
+        }
+      ]
+
+    },
+    {
+      "projectName": "HackeyVR",
+      "htmlID": "hackeyVR",
+      "date": "Dec 2016 - May 2017",
+      "author": "Edwin Chen, Andrew Palangio",
+      "headline": "Unity VR hockey simulator for HTC Vive via SteamVR",
+      "description": "Uses VR blah blah b;ah stuff",
+      "occupation": "Student at Humber College",
+      "coverImage": "logoVR.jpg",
+      "tech": "Unity C#, SteamVR, NewtonVR (Physics), MagicaVoxel (Models)",
+      "images": [
+        {
+          "imgName": "VRdemo.jpg",
+          "caption": "Live action shot of HackeyVR featured at Level Up Toronto 2017. Photo credit: Ubisoft Toronto",
+          "tooltip": ""
+        },
+        {
+          "imgName": "VRdanDemo.png",
+          "caption": "Early demo at Humber College",
+          "tooltip": ""
+        },
+        {
+          "imgName": "VRLockerRoom.PNG",
+          "caption": "Interactive locker room lobby to access multiple mini games",
+          "tooltip": ""
+        }
+      ]
+
+    },
+
+    {
+      "projectName": "12 Days of XMAS",
+      "htmlID": "12daysXmas",
+      "date": "Oct 2016 - Dec 2016",
+      "author": "Edwin Chen, Robert Spongale",
+      "headline": "On the 12th day of Xmas, my true love gave to me: 12 waves of snowman HELL!!",
+      "description": "The 12 Days of Xmas is a Unity-built survival FPS game. Survive 12 days or 'waves' by killing all the evil snowmen during each day. As you destroy enemies, they drop power ups in the form of presents that the player collects which could be more ammo or health. Chance of heavy snowfall on a day can slow down your walking speed. Can you survive the 12 days of Xmas?",
+      "occupation": "Student at Humber College",
+      "coverImage": "12days.png",
+      "tech": "Unity C#",
+      "images": [
+        {
+          "imgName": "12days.png",
+          "caption": "Get that cake mofo's!",
+          "tooltip": "Hello!"
+        }
+      ]
+
+    },
+
+    {
+      "projectName": "Hackey",
+      "htmlID": "hackey",
+      "date": "Oct 2015 - Dec 2015",
+      "author": "Edwin Chen",
+      "headline": "No more Maple \"Laffs\"! It's time to fight back!",
+      "description": "Hackey is a hockey-theme Unity 3D beat'em up game with a cartoony feel. As a parody of the Toronto Maple Leafs, you play as a fictional player of the Leafs as you retaliate against anger fans, media reporters, rival hockey teams and many more! Defeat your enemies before they defeat you!",
+      "occupation": "Student at Humber College",
+      "coverImage": "hackeyUnity.png",
+      "tech": "Unity C#",
+      "images": [
+        {
+          "imgName": "hackeyMelee.png",
+          "caption": "",
+          "tooltip": ""
+        },
+        {
+          "imgName": "hackeyShoot.png",
+          "caption": "",
+          "tooltip": ""
+        },
+        {
+          "imgName": "hackeyTitle.png",
+          "caption": "",
+          "tooltip": ""
+        },
+        {
+          "imgName": "hackeyExplosion.png",
+          "caption": "",
+          "tooltip": ""
+        }
+      ]
+
+    },
+    {
+      "projectName": "Deflector",
+      "htmlID": "deflector",
+      "date": "Jun 2015 - Jul 2015",
+      "author": "Throwback Entertainment, Inc",
+      "headline": "Defend Earth!",
+      "description": "Unity 2D space-themed tower defense mobile game targeted for Windows Phone and Android platforms. Use the touch screen interface to shoot rockets and laser beams to destroy surrounding enemies. Access the Deflector store to buy power ups to help achieve victory!",
+      "occupation": "Game Programmer Intern at Throwback Entertainment Inc",
+      "coverImage": "deflector.png",
+      "tech": "Unity C#",
+      "images": [
+        {
+          "imgName": "deflGP1.png",
+          "caption": "Standard gameplay",
+          "tooltip": ""
+        },
+        {
+          "imgName": "deflCredit.png",
+          "caption": "Name in the Stars. My first credit in a video game ever.",
+          "tooltip": ""
+        }
+      ]
+
+    }
+
+
+  ]
+}

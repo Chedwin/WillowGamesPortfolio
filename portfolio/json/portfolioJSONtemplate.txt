@@ -1,0 +1,26 @@
+{
+  "portfolioJSON": [
+    {
+      "projectName": ,
+      "htmlID": ,
+      "date": ,
+      "author": ,
+      "headline": ,
+      "description": ,
+      "occupation": ,
+      "coverImage":  ,
+      "images": [
+        {
+          "imgName": ,
+          "caption": ,
+          "tooltip": 
+        },
+        {
+          "imgName": ,
+          "caption": ,
+          "tooltip": 
+        }
+      ]
+
+    },
+]}

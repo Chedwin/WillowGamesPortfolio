@@ -1,0 +1,448 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+
+<head> <!-- BEGIN Head -->
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- TITLE -->
+    <title>Edwin Chen | Portfolio</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="img/controllerICON.png">
+
+    <!-- jQuery -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+
+    <!-- AngularJS CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+
+    <!-- CUSTOM JavaScript -->
+    <script type="text/javascript" src="js/loadingScreen.js"></script> 
+    <script type="text/javascript" src="js/myPortfolioScript.js"></script> 
+
+
+
+    <!-- Bootstrap Core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="css/freelancer.min.css" rel="stylesheet">
+
+    <!-- CUSTOM CSS -->
+    <link href="css/myPortfolioStyle.css" rel="stylesheet" />
+
+    <!-- Custom Fonts CDN -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+</head> <!-- END Head -->
+
+<!------------------------------------------------- BODY ------------------------------------------------------------>
+<body id="page-top" class="index" onload="loadScreen()">
+
+    <div id="loader"></div>
+
+<!-- BEGIN AngularJS App div -->
+    <div id="mainApp" class="animate-bottom" ng-app="myApp" ng-controller="myCtrl">
+        
+        <div id="skipnav"><a href="#maincontent">Skip to main content</a></div>
+
+    <!------------------------------- Navigation ---------------------------------------------------------->
+        <nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header page-scroll">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                    </button>
+                    <a class="navbar-brand" href="#page-top">Edwin Chen</a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="hidden">
+                            <a href="#page-top"></a>
+                        </li>
+                        <li class="page-scroll">
+                            <a href="#portfolio"><span class="fa fa-briefcase"></span> Portfolio</a>
+                        </li>
+                        <li class="page-scroll">
+                            <a href="#about"><span class="glyphicon glyphicon-user"></span> About</a>
+                        </li>
+                        <li class="page-scroll">
+                            <a href="#resume"><span class="fa fa-file-text"></span> Resume</a>
+                        </li>
+                        <li class="page-scroll">
+                            <a href="#contact"><span class="fa fa-phone-square"></span> Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container-fluid -->
+        </nav>
+
+<!-------------------------------------------- Header ---------------------------------------------------------->
+        <header>
+            <div class="container" id="maincontent" tabindex="-1">
+
+                <div class="row">
+                    <div class="col-lg-12">
+                        <img class="img-responsive img-circle" id="portrait" src="img/portrait.jpg" alt="">
+                        <div class="intro-text">
+                            <h1 class="name">Edwin Chen</h1>
+                            <hr class="star-light">
+                            <h2><span class="fa fa-gamepad"></span> Game Programmer</h2>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </header>
+
+        <!------------------------------------------------- PORTFOLIO section ---------------------------------------------------------------------------------------------------->
+        <section id="portfolio">
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h2>
+                            <span class="fa fa-briefcase"></span>
+                            Portfolio
+                        </h2>
+                        <hr class="star-primary">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <!--                   
+                    IMPORTANT NOTE:
+
+                        Here is where AngularJS will be used
+                        myPortfolio.js contains a "portfolio" js object that contains data on portfolio projects 
+                        This data is read from a JSON file called "portfolio.txt"
+
+                        From here, to add more projects to the portfolio, just add it to the JSON file!
+                        Also, make sure that your images names and paths are specified correctly!
+
+                        This will save A LOT of time by not messing with this HTML source code
+                    -->
+
+                    <!-- AngularJS loop -->
+                    <div data-ng-repeat="x in appProjects">
+
+                        <!-- Project Name: {{ x.projectName }} -->
+                        <div class="col-sm-4 portfolio-item">
+                            <a href="#{{ x.htmlID }}" class="portfolio-link img-thumbnail" data-toggle="modal" title="{{ x.projectName }}">
+                                <div class="caption">
+                                    <div class="caption-content">
+                                        <i class="fa fa-search-plus fa-3x"></i>
+                                    </div>
+                                </div>
+                                <img src="img/portfolio/{{ x.coverImage }}" class="img-responsive" alt="Cabin">
+                            </a>
+                        </div>
+
+                    </div>
+
+                    <!-- Hurricane Game Engine -->
+                    <!-- Hackey VR -->
+                    <!-- 12 Days of XMAS -->
+                    <!-- St Regis Crystal -->
+                    <!-- Hackey -->
+                    <!-- Deflector -->
+                    
+                
+                </div>
+            </div>
+        </section>
+
+        <!------------------------------------------------- ABOUT ---------------------------------------------------------------------------------------------------->
+        <section class="success">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h2><span class="glyphicon glyphicon-user"></span> About</h2>
+                        <hr class="star-light">
+                    </div>
+                </div>
+                <div class="row" id="about">
+                    <div class="col-lg-4" >
+                        <img class="img-circle" src="img/about/gradfamily.jpg" />
+                        <br />
+                    </div>
+                    <div class="col-lg-4">
+                        <img class="img-circle" src="img/about/twitter.jpg" />
+                        <br />
+                    </div>
+                    <div class="col-lg-4">
+                        <img class="img-circle" src="img/about/jonCherami.jpg" />
+                        <br />
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-offset-1 col-lg-10 col-lg-offset-1">
+                        <style>
+                            #humberLink, #humberLink:visited {
+                                color:navy;
+                                text-decoration:underline;
+                            }
+                            #humberLink:hover {
+                                color: blue;
+                                text-decoration:none;
+                            }
+                        </style>
+
+                        <p>Hello!</p>
+                        <br/>
+
+                        <p>I'm a computer programmer with 3+ years of (game) programming experience.
+                        Currently located in Toronto, ON. Open to relocation within Canada and the USA.
+                        </p>
+                        <br />
+
+                        <p> Graduate of <a id="humberLink" target="_blank" href="https://mediastudies.humber.ca/programs/game-programming.html">Humber College Game Programming</a>, Class of 2017.</p>
+                        <br/>
+
+
+                        <p>On the technical side, I focus mainly on programming core gameplay mechanics and primary functionalities of games.
+                        I am also extremely interested in game engine design as it allows total control for the programmers to utilize system hardware and resources.
+                        </p>
+                        <br/>
+
+                        <p>My game design philosophy is to create every user-interactive game element to be as intuitive as possible.
+                        I believe that the easier it is for a player to catch on to a game's mechanics, the better experience it will create for the player to continue playing.
+                        </p>
+                        <br/>
+
+                        <p>I thrive in creative and collaborative environments where hard work and passion for making great games is valued,
+                        and where I can leverage my strong technical background to enhance my designs and team.
+                        </p>
+                        <br/>
+
+
+                        
+                        <br/>
+                    </div>
+                </div>
+
+                <!--<div class="row">
+                    <div class="col-lg-5 col-lg-offset-1">
+
+                        <h2>Skills</h2>
+                        <hr class="star-light">
+
+                        <ul>
+                            <li>Blsslslls</li>
+                            <li>Blsslslls</li>
+                            <li>Blsslslls</li>
+                            <li>Blsslslls</li>
+                            <li>Blsslslls</li>
+                        </ul>
+
+                    </div>
+
+                    <div class="col-lg-offset-1 col-lg-5">
+
+                        <h2>Toolkit</h2>
+                        <hr class="star-light">
+
+                        <ul>
+                            <li>Blsslslls</li>
+                            <li>Blsslslls</li>
+                            <li>Blsslslls</li>
+                            <li>Blsslslls</li>
+                            <li>Blsslslls</li>
+                        </ul>
+
+                    </div>
+                </div>-->
+
+                
+            </div>
+        </section>
+
+        <!--------- ---------------------------------------- RESUME Section ---------------------------------------------------------------------------------------------------->
+        <section id="resume">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h2><span class="fa fa-file-text"></span> Resume</h2>
+                        <hr class="star-primary">
+                    </div>
+                </div>
+                <div class="row">
+                    <object style="width:100%;height:1200px" type="application/pdf" data="docs/EdwinChenResume.pdf"></object>
+                </div>
+            </div>
+        </section>
+
+        <!------------------------------------------------- FOOTER / CONTACT ---------------------------------------------------------------------------------------------------->
+
+        <footer class="text-center" id="contact">
+
+            <div class="footer-above">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 text-center">
+                            <h2><span class="fa fa-phone-square"></span> Contact</h2>
+                            <hr class="star-light">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="footer-col col-md-4">
+                            <h3><span class="fa fa-map-marker"></span> Location</h3>
+                            <p>
+                                Toronto, ON Canada
+                                <br>M4Y 2X6
+                            </p>
+                        </div>
+                        <div class="footer-col col-md-4">
+                            <h3><span class="fa fa-globe"></span> Around the Web</h3>
+                            <ul class="list-inline">
+                                <!-- GitHub Link-->
+                                <li><a target="_blank" href="https://github.com/Chedwin" data-toggle="tooltip" title="GitHub: Chedwin" class="btn-social btn-outline"><span class="sr-only">GitHub</span><i class="fa fa-fw fa-github-alt"></i></a></li>
+                                <!-- Twitter Link -->
+                                <li><a target="_blank" href="https://twitter.com/Chedwin_Games" data-toggle="tooltip" title="Twitter: @Chedwin_Games" class="btn-social btn-outline"><span class="sr-only">Twitter</span><i class="fa fa-fw fa-twitter"></i></a></li>
+                                <!-- LinkedIn Link-->
+                                <li><a target="_blank" href="https://www.linkedin.com/in/edwinchen14/" data-toggle="tooltip" title="LinkedIn: edwinchen14" class="btn-social btn-outline"><span class="sr-only">Linked In</span><i class="fa fa-fw fa-linkedin"></i></a></li>
+                            </ul>
+
+                        </div>
+                        <div class="footer-col col-md-4">
+                            <h3><span class="fa fa-envelope"></span> Email</h3>
+
+                            <a href="mailto:edwin14chen@gmail.com" class="btn btn-lg btn-success" data-toggle="tooltip" title="Send me an email!">edwin14chen@gmail.com</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-below">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <p>&copy; Edwin Chen 2017</p>
+                            <p>All content and trademarks property of their respective owners.</p>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+        <div class="scroll-top page-scroll hidden-sm hidden-xs hidden-lg hidden-md">
+            <a class="btn btn-primary" href="#page-top">
+                <i class="fa fa-chevron-up"></i>
+            </a>
+        </div>
+
+<!------------------------------------------------- Portfolio MODALS Section ---------------------------------------------------------------------------------------------------->
+        
+        <!--         
+        IMPORTANT NOTE:
+
+            This is the implementation for the specific modal pages for each portfolio project          
+            Same idea here as the PORTFOLIO SECTION in terms of looping thru projects from JSON file
+        -->
+        <div data-ng-repeat="x in appProjects">
+
+            <div class="portfolio-modal modal fade" id="{{ x.htmlID }}" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-content">
+                    <div class="close-modal" data-dismiss="modal">
+                        <div class="lr">
+                            <div class="rl">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-offset-1 col-lg-10 col-lg-offset-1">
+                                <div class="modal-body">
+                                    <!-- TITLE-->
+                                    <h2>{{ x.projectName }}</h2>
+                                    <hr class="star-primary">
+                                    <h4>{{ x.headline }}</h4><br />
+
+
+                                    <div class="row">
+
+                                        <!-- Image grid for individual project -->
+                                        <div data-ng-repeat="pic in x.images track by $index">
+
+                                            <div class="column">           
+                                                <img class="thumbnail" src="img/portfolio/{{ pic.imgName }}" data-toggle="tooltip" title="{{ pic.tooltip }}" style="width:100%;margin-bottom:10px">
+                                                <style>
+                                                    .imgCaption {
+                                                        font-style:italic;
+                                                        font-size:16px;
+                                                    }
+                                                </style>
+                                                <p class="imgCaption">{{ pic.caption }}</p>
+                                            </div>
+
+                                        </div> <!-- end image loop -->   
+
+                                    </div>                           
+                                    
+                                    <!-- PROJECT DESCRIPTION -->
+                                    <h5>Description</h5>
+                                    <p>{{ x.description }}</p><br/>
+                                    
+                                    <!-- Project details -->
+                                    <h5>Project Details</h5>
+                                    <ul class="list-inline item-details">
+                                        <li>Author(s): <strong>{{ x.author }}</strong></li>
+                                        <li>Date: <strong>{{ x.date }}</strong></li>
+                                        <li>Occupation: <strong>{{ x.occupation }}</strong></li>
+                                        <li>Tech: <strong>{{ x.tech }}</strong></li>
+                                    </ul>
+
+                                    
+                                    <!-- Close modal button -->
+                                    <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div> <!-- END data-ng-repeat for PROJECT MODAL -->
+
+        
+<!-------- WEIRD JS inclusions for Bootstrap theme DO NOT MOVE ---------------------------------------------------------------------------->
+
+        <!-- jQuery -->
+        <script src="vendor/jquery/jquery.min.js"></script>
+
+        <!-- Bootstrap Core JavaScript -->
+        <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+        <!-- Plugin JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+        <!-- Contact Form JavaScript -->
+        <script src="js/jqBootstrapValidation.js"></script>
+        <!--<script src="js/contact_me.js"></script>-->
+
+        <!-- Theme JavaScript -->
+        <script src="js/freelancer.min.js"></script>
+        
+<!--------------------------------------------------------------------------------------------------------------------------------------------------->
+
+
+    </div> <!-- END AngularJS App div -->
+
+</body> <!------------------------- END BODY ---------------------------------->
+
+
+</html> <!------------------------- END HTML ---------------------------------->
