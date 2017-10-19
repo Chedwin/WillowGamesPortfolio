@@ -8,6 +8,7 @@
       "headline": "Open-source custom 3D C++ game engine using DirectX 11 API",
       "description": "Design inspired by Unity. Notable features: component-based game objects, HLSL shader programs, custom scripting behaviour (similar to Unity's MonoBehavior), 3D model loading via Assimp",
       "occupation": "Student at Humber College / Personal Project",
+      "link": "https://github.com/Chedwin/HurricaneX.git",
       "coverImage": "hurricaneEngineLogo.png",
       "tech": "C++, WIN32, DirectX, Assimp, TinyXML",
       "images": [
@@ -17,8 +18,13 @@
           "tooltip": "Still a work in progress!"
         },
         {
-          "imgName": "cake.png",
-          "caption": "Get that cake mofo's!",
+          "imgName": "hurricaneComponent.png",
+          "caption": "Templated GetComponent() and GetScript() methods.",
+          "tooltip": "Wubba lubba dub dub!!"
+        },
+        {
+          "imgName": "hurricaneScripting.png",
+          "caption": "Allow for custom scripting in derived Hurricane games.",
           "tooltip": "Wubba lubba dub dub!!"
         }
       ]
@@ -32,6 +38,7 @@
       "headline": "Unity VR hockey simulator for HTC Vive via SteamVR",
       "description": "Uses VR blah blah b;ah stuff",
       "occupation": "Student at Humber College",
+      "link": "https://github.com/Chedwin/HackeyVR.git",
       "coverImage": "logoVR.jpg",
       "tech": "Unity C#, SteamVR, NewtonVR (Physics), MagicaVoxel (Models)",
       "images": [
@@ -62,6 +69,7 @@
       "headline": "On the 12th day of Xmas, my true love gave to me: 12 waves of snowman HELL!!",
       "description": "The 12 Days of Xmas is a Unity-built survival FPS game. Survive 12 days or 'waves' by killing all the evil snowmen during each day. As you destroy enemies, they drop power ups in the form of presents that the player collects which could be more ammo or health. Chance of heavy snowfall on a day can slow down your walking speed. Can you survive the 12 days of Xmas?",
       "occupation": "Student at Humber College",
+      "link": "https://github.com/Chedwin/12DaysNON-NETWORK.git",
       "coverImage": "12days.png",
       "tech": "Unity C#",
       "images": [
@@ -82,23 +90,24 @@
       "headline": "No more Maple \"Laffs\"! It's time to fight back!",
       "description": "Hackey is a hockey-theme Unity 3D beat'em up game with a cartoony feel. As a parody of the Toronto Maple Leafs, you play as a fictional player of the Leafs as you retaliate against anger fans, media reporters, rival hockey teams and many more! Defeat your enemies before they defeat you!",
       "occupation": "Student at Humber College",
+      "link": "https://github.com/Chedwin/HackeyUnity.git",
       "coverImage": "hackeyUnity.png",
       "tech": "Unity C#",
       "images": [
         {
           "imgName": "hackeyMelee.png",
-          "caption": "",
-          "tooltip": ""
+          "caption": "Beat those crazy, angry fans down to the ground!",
+          "tooltip": "Two minutes for cross checking!"
         },
         {
           "imgName": "hackeyShoot.png",
-          "caption": "",
-          "tooltip": ""
+          "caption": "He shoots, he scores!",
+          "tooltip": "You don't have to ME to shoot!"
         },
         {
           "imgName": "hackeyTitle.png",
-          "caption": "",
-          "tooltip": ""
+          "caption": "The good old hockey game!",
+          "tooltip": "Who made this menu? Montreal?"
         },
         {
           "imgName": "hackeyExplosion.png",
@@ -112,10 +121,11 @@
       "projectName": "Deflector",
       "htmlID": "deflector",
       "date": "Jun 2015 - Jul 2015",
-      "author": "Throwback Entertainment, Inc",
+      "author": "Throwback Entertainment Inc",
       "headline": "Defend Earth!",
       "description": "Unity 2D space-themed tower defense mobile game targeted for Windows Phone and Android platforms. Use the touch screen interface to shoot rockets and laser beams to destroy surrounding enemies. Access the Deflector store to buy power ups to help achieve victory!",
       "occupation": "Game Programmer Intern at Throwback Entertainment Inc",
+	    "link": "",
       "coverImage": "deflector.png",
       "tech": "Unity C#",
       "images": [
@@ -126,7 +136,17 @@
         },
         {
           "imgName": "deflCredit.png",
-          "caption": "Name in the Stars. My first credit in a video game ever.",
+          "caption": "Name in the Stars. My first credit in a game ever.",
+          "tooltip": ""
+        },
+        {
+          "imgName": "deflMenu.png",
+          "caption": "Main Menu",
+          "tooltip": ""
+        },
+        {
+          "imgName": "deflGP2.png",
+          "caption": "Aliens, asteroids, and meteors",
           "tooltip": ""
         }
       ]

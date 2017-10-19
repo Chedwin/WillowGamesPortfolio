@@ -2,15 +2,13 @@
   "ExpandedNodes": [
     "",
     "\\css",
-    "\\Fonts",
     "\\img",
     "\\img\\about",
     "\\js",
     "\\json",
     "\\vendor",
     "\\vendor\\font-awesome",
-    "\\vendor\\font-awesome\\fonts",
-    "\\vendor\\jquery"
+    "\\vendor\\font-awesome\\fonts"
   ],
   "SelectedNode": "\\index.html",
   "PreviewInSolutionExplorer": false

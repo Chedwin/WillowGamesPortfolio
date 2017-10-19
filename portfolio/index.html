@@ -12,23 +12,22 @@
 
     <!-- TITLE -->
     <title>Edwin Chen | Portfolio</title>
+
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="img/controllerICON.png">
 
-    <!-- jQuery -->
-    <script src="vendor/jquery/jquery.min.js"></script>
+    <!-- jQuery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
     <!-- AngularJS CDN -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
 
     <!-- CUSTOM JavaScript -->
-    <script type="text/javascript" src="js/loadingScreen.js"></script> 
     <script type="text/javascript" src="js/myPortfolioScript.js"></script> 
 
 
-
-    <!-- Bootstrap Core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Core CSS CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
     <!-- Theme CSS -->
     <link href="css/freelancer.min.css" rel="stylesheet">
@@ -36,10 +35,19 @@
     <!-- CUSTOM CSS -->
     <link href="css/myPortfolioStyle.css" rel="stylesheet" />
 
+    <!-- Bootstrap Core JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <!-- Custom Fonts CDN -->
-    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
 
 </head> <!-- END Head -->
 
@@ -50,9 +58,7 @@
 
 <!-- BEGIN AngularJS App div -->
     <div id="mainApp" class="animate-bottom" ng-app="myApp" ng-controller="myCtrl">
-        
-        <div id="skipnav"><a href="#maincontent">Skip to main content</a></div>
-
+       
     <!------------------------------- Navigation ---------------------------------------------------------->
         <nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom">
             <div class="container">
@@ -91,8 +97,24 @@
 
 <!-------------------------------------------- Header ---------------------------------------------------------->
         <header>
-            <div class="container" id="maincontent" tabindex="-1">
+            <style>
+                .parallax {
+                    /* The image used */
+                    background-image: url("img/about/humberParty.jpg");
+                    /* Set a specific height */
+                    height: 100%;
+                    width: 100%;
+                    /* Create the parallax scrolling effect */
+                    background-attachment: fixed;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                }
 
+            </style>
+
+            <!-- Container element -->
+            <div class="parallax container" id="maincontent" tabindex="-1">
                 <div class="row">
                     <div class="col-lg-12">
                         <img class="img-responsive img-circle" id="portrait" src="img/portrait.jpg" alt="">
@@ -103,7 +125,6 @@
                         </div>
                     </div>
                 </div>
-
             </div>
         </header>
 
@@ -137,7 +158,7 @@
 
                     <!-- AngularJS loop -->
                     <div data-ng-repeat="x in appProjects">
-
+                       
                         <!-- Project Name: {{ x.projectName }} -->
                         <div class="col-sm-4 portfolio-item">
                             <a href="#{{ x.htmlID }}" class="portfolio-link img-thumbnail" data-toggle="modal" title="{{ x.projectName }}">
@@ -165,73 +186,88 @@
         </section>
 
         <!------------------------------------------------- ABOUT ---------------------------------------------------------------------------------------------------->
-        <section class="success">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12 text-center">
-                        <h2><span class="glyphicon glyphicon-user"></span> About</h2>
-                        <hr class="star-light">
+        <section id="about"><!--<section class="success" id="about">-->
+
+            <style>
+                .parallaxAbout {
+                    /* The image used */
+                    background-image: url("img/about/vancouverWedding.jpg");
+                    /* Set a specific height */
+                    height: 100%;
+                    width: 100%;
+                    /* Create the parallax scrolling effect */
+                    background-attachment: fixed;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    padding: 2% 4% 2% 4%;
+                    margin: 40px 0 20px 0;
+                }
+            </style> 
+            <div class="parallaxAbout">
+                
+                <div class="bluePanel">
+
+                    <div class="row">
+                        <div class="col-lg-12 text-center">
+                            <h2 ><span class="glyphicon glyphicon-user"></span> About</h2>
+                            <hr class="star-light">
+                        </div>
                     </div>
-                </div>
-                <div class="row" id="about">
-                    <div class="col-lg-4" >
-                        <img class="img-circle" src="img/about/gradfamily.jpg" />
-                        <br />
+                    <div class="row">
+                        <div class="col-lg-4" >
+                            <img class="img-circle" src="img/about/gradfamily.jpg" />
+                            <br />
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-circle" src="img/about/twitter.jpg" />
+                            <br />
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="img-circle" src="img/about/jonCherami.jpg" />
+                            <br />
+                        </div>
                     </div>
-                    <div class="col-lg-4">
-                        <img class="img-circle" src="img/about/twitter.jpg" />
-                        <br />
-                    </div>
-                    <div class="col-lg-4">
-                        <img class="img-circle" src="img/about/jonCherami.jpg" />
-                        <br />
-                    </div>
-                </div>
 
-                <div class="row">
-                    <div class="col-lg-offset-1 col-lg-10 col-lg-offset-1">
-                        <style>
-                            #humberLink, #humberLink:visited {
-                                color:navy;
-                                text-decoration:underline;
-                            }
-                            #humberLink:hover {
-                                color: blue;
-                                text-decoration:none;
-                            }
-                        </style>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <style>
+                                
+                            </style>
 
-                        <p>Hello!</p>
-                        <br/>
+                            <p>Hello!</p>
+                            <br/>
 
-                        <p>I'm a computer programmer with 3+ years of (game) programming experience.
-                        Currently located in Toronto, ON. Open to relocation within Canada and the USA.
-                        </p>
-                        <br />
+                            <p>I'm a computer programmer with 3+ years of (game) programming experience.
+                            Currently located in Toronto, ON. Open to relocation within Canada and the USA.
+                            </p>
+                            <br />
 
-                        <p> Graduate of <a id="humberLink" target="_blank" href="https://mediastudies.humber.ca/programs/game-programming.html">Humber College Game Programming</a>, Class of 2017.</p>
-                        <br/>
+                            <p> Graduate of <a id="humberLink" target="_blank" href="https://mediastudies.humber.ca/programs/game-programming.html">Humber College Game Programming</a>, Class of 2017.</p>
+                            <br/>
 
 
-                        <p>On the technical side, I focus mainly on programming core gameplay mechanics and primary functionalities of games.
-                        I am also extremely interested in game engine design as it allows total control for the programmers to utilize system hardware and resources.
-                        </p>
-                        <br/>
+                            <p>On the technical side, I focus mainly on programming core gameplay mechanics and primary functionalities of games.
+                            I am also extremely interested in game engine design as it allows total control for the programmers to utilize system hardware and resources.
+                            </p>
+                            <br/>
 
-                        <p>My game design philosophy is to create every user-interactive game element to be as intuitive as possible.
-                        I believe that the easier it is for a player to catch on to a game's mechanics, the better experience it will create for the player to continue playing.
-                        </p>
-                        <br/>
+                            <p>My game design philosophy is to create every user-interactive game element to be as intuitive as possible.
+                            I believe that the easier it is for a player to catch on to a game's mechanics, the better experience it will create for the player to continue playing.
+                            </p>
+                            <br/>
 
-                        <p>I thrive in creative and collaborative environments where hard work and passion for making great games is valued,
-                        and where I can leverage my strong technical background to enhance my designs and team.
-                        </p>
-                        <br/>
+                            <p>I thrive in creative and collaborative environments where hard work and passion for making great games is valued,
+                            and where I can leverage my strong technical background to enhance my designs and team.
+                            </p>
+                            <br/>
 
 
                         
-                        <br/>
-                    </div>
+                            <br/>
+                        </div>
+                </div>
+
                 </div>
 
                 <!--<div class="row">
@@ -289,8 +325,25 @@
 
         <footer class="text-center" id="contact">
 
-            <div class="footer-above">
-                <div class="container">
+            <style>
+                .parallaxContact {
+                    /* The image used */
+                    background-image: url("img/about/jays2014.jpg");
+                    /* Set a specific height */
+                    height: 600px;
+                    width: 100%;
+                    /* Create the parallax scrolling effect */
+                    background-attachment: fixed;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    padding: 2% 4% 2% 4%;
+                    margin-top: 5%;
+                }
+            </style> 
+            <div class="parallaxContact">
+
+                <div class="container bluePanel">
                     <div class="row">
                         <div class="col-lg-12 text-center">
                             <h2><span class="fa fa-phone-square"></span> Contact</h2>
@@ -308,6 +361,7 @@
                         <div class="footer-col col-md-4">
                             <h3><span class="fa fa-globe"></span> Around the Web</h3>
                             <ul class="list-inline">
+       
                                 <!-- GitHub Link-->
                                 <li><a target="_blank" href="https://github.com/Chedwin" data-toggle="tooltip" title="GitHub: Chedwin" class="btn-social btn-outline"><span class="sr-only">GitHub</span><i class="fa fa-fw fa-github-alt"></i></a></li>
                                 <!-- Twitter Link -->
@@ -324,7 +378,9 @@
                         </div>
                     </div>
                 </div>
+
             </div>
+
             <div class="footer-below">
                 <div class="container">
                     <div class="row">
@@ -356,37 +412,38 @@
         <div data-ng-repeat="x in appProjects">
 
             <div class="portfolio-modal modal fade" id="{{ x.htmlID }}" tabindex="-1" role="dialog" aria-hidden="true">
-                <div class="modal-content">
-                    <div class="close-modal" data-dismiss="modal">
-                        <div class="lr">
-                            <div class="rl">
-                            </div>
-                        </div>
+                <div class="modal-content" style="border-radius: 3%;">
+                    <div class="close-modal" id="myCloseProject" data-dismiss="modal">
+                        <button type="button" class="btn btn-danger"><span class="fa fa-times"></span></button> 
                     </div>
+
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-offset-1 col-lg-10 col-lg-offset-1">
                                 <div class="modal-body">
                                     <!-- TITLE-->
                                     <h2>{{ x.projectName }}</h2>
-                                    <hr class="star-primary">
+                                    <hr class="star-primary" style="border-color:white">
                                     <h4>{{ x.headline }}</h4><br />
 
 
-                                    <div class="row">
+                                    <div class="row text-center">
 
                                         <!-- Image grid for individual project -->
                                         <div data-ng-repeat="pic in x.images track by $index">
 
                                             <div class="column">           
-                                                <img class="thumbnail" src="img/portfolio/{{ pic.imgName }}" data-toggle="tooltip" title="{{ pic.tooltip }}" style="width:100%;margin-bottom:10px">
+                                                <img class="img-thumbnail" src="img/portfolio/{{ pic.imgName }}" data-toggle="tooltip" title="{{ pic.tooltip }}" style="width:100%;margin:0px;display:inline-block;float:left;">
                                                 <style>
                                                     .imgCaption {
                                                         font-style:italic;
                                                         font-size:16px;
+                                                        text-align:center;
                                                     }
                                                 </style>
                                                 <p class="imgCaption">{{ pic.caption }}</p>
+
+
                                             </div>
 
                                         </div> <!-- end image loop -->   
@@ -406,41 +463,38 @@
                                         <li>Tech: <strong>{{ x.tech }}</strong></li>
                                     </ul>
 
+                                    <div data-ng-if='x.link != ""'>
+                                        <h5>GitHub / Download Link</h5>
+                                        
+                                        <a href="{{x.link}}" target="_blank" class="btn btn-primary" data-toggle="tooltip" title="{{ x.projectName }}">{{x.link}}</a>
+                                        <br/><br />
+                                    </div>
                                     
                                     <!-- Close modal button -->
-                                    <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                                    <div id="bottomClose">
+                                        <button type="button"  class="btn btn-danger" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                                    </div>
+
                                 </div>
                             </div>
                         </div>
-                    </div>
+
+                    </div> <!-- end class Container -->
+
                 </div>
             </div>
 
         </div> <!-- END data-ng-repeat for PROJECT MODAL -->
 
-        
-<!-------- WEIRD JS inclusions for Bootstrap theme DO NOT MOVE ---------------------------------------------------------------------------->
-
-        <!-- jQuery -->
-        <script src="vendor/jquery/jquery.min.js"></script>
-
-        <!-- Bootstrap Core JavaScript -->
-        <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-
-        <!-- Plugin JavaScript -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-
-        <!-- Contact Form JavaScript -->
-        <script src="js/jqBootstrapValidation.js"></script>
-        <!--<script src="js/contact_me.js"></script>-->
-
-        <!-- Theme JavaScript -->
-        <script src="js/freelancer.min.js"></script>
-        
-<!--------------------------------------------------------------------------------------------------------------------------------------------------->
-
-
     </div> <!-- END AngularJS App div -->
+
+
+    <!-- Contact Form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+
+    <!-- Theme JavaScript -->
+    <script src="js/freelancer.min.js"></script>
+
 
 </body> <!------------------------- END BODY ---------------------------------->
 
